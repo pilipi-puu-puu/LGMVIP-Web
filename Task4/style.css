@@ -1,0 +1,186 @@
+/* stylesheets */
+
+body{
+
+    margin: 0;
+    padding:0;
+    line-height: 0.5;
+    color:#fff;
+    background:linear-gradient(-45deg,#EE7752, #E73C7E, #23A6D5, #23D5AB); /*For animation, we have picked 4 colors*/
+    background-size:400% 400%;
+    animation: change 10s ease-in-out infinite; /*this animation will be run infinite times*/
+    font-family: sans-serif;
+}
+
+
+/* For the animation(shifting the colors) */
+@keyframes change{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+/* To add the link icon before "contact me" text */
+a[href^="https"]::before {
+    content: "🔗";
+  }
+
+a{
+    color:red
+}
+a:visited{
+    color: yellow
+}
+
+.calc{
+
+    width: 500px;
+    padding-top: 100px;
+    padding-bottom: 100;
+    position: absolute;
+    top:50%;
+    left:70%;
+    animation:reverse;
+    transition:0.25px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+#zero{
+
+    height: 55;
+    width: 116;
+    font-size: 20;
+    font-family: cursive;
+    font-weight: 300;
+
+}
+
+#display{
+
+    border:none;
+    background: white;
+    border-radius: 30px;
+    width: 245;
+    font-size: 20;
+    font-family: sans-serif;
+    font-weight: 300;
+    height: 60;
+    margin: auto;
+    border:2px solid white(5, 218, 255, 0.726);
+    color: black;
+
+}
+
+.button{
+
+    width: 55;
+    height: 55;
+    padding-top: -1;
+    font-size: 20;
+    border: none;
+    background: white;
+    font-family: cursive;
+    font-weight: 300;
+    border:0;
+    border-radius: 30px;
+    margin: 1.5;
+    transition:0.25px;
+    cursor:pointer;     
+      
+}
+
+/* For the 1st heading "Online Calculator" */
+h1{
+
+    margin-top: 300px;
+    margin-left: 100px;
+    font-family: Georgia, serif;
+    text-decoration: underline;
+    font-size:46;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    animation: 3s linear 1s infinite alternate slidein;
+}
+/* For the text"Created by Anushka Paul" */
+h2{
+
+    color: white;
+    margin-top: -1px;
+    font-family: sans-serif;
+    margin-left: 367px;
+    
+}
+/* For the text "Contact me" */
+.message1 {
+    color: white; 
+    float: right;
+    margin-right: 3%;
+    padding:5px;
+  }
+ 
+/* In bottom for the black bar section */
+.view{
+    background-color: black;
+    height: 25px;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 1px;
+  }
+
+/* For the moving red laser */
+   .red_laser{ 
+    background-color: red;
+    background-image: linear-gradient(to right,
+        rgba(0, 0, 0, .9) 25%,
+        rgba(0, 0, 0, .1) 50%,
+        rgba(0, 0, 0, .9) 75%);
+    color: white;
+    height: 100%;
+    width: 20%;
+  
+    -webkit-animation: 5s linear 0s infinite alternate laser;
+            animation: 5s linear 0s infinite alternate laser;
+  }
+  
+  @-webkit-keyframes laser { from { margin-left: -20%; } to { margin-left: 100%; }  }
+          @keyframes laser { from { margin-left: -20%; } to { margin-left: 100%; }  } 
+
+
+.operator{
+
+    width: 55;
+    height: 55;
+    padding-top: -1;
+    font-size: 20;
+    text-align: center;
+    color: black;
+    border: none;
+    background: white;
+    font-family: sans-serif;
+    font-weight: 500;
+    border:0;
+    border-radius: 30px;
+    margin: 1.5;
+    transition:0.25px;
+    cursor:pointer;   
+    
+}
+
+/* Notice that when you are taking the cursor on any numerical value or any operators, it is highlighting */
+.operator:hover{
+    background: #fa9ced;
+}
+.button:hover{
+    background:  #ff8ad2;
+}
+
+/* Special thanks to Brijesh kumar sharma [#Techprojects]for helping me to structure the idea.*/
